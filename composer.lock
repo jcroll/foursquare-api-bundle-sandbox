@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "e67df720e8a1a2e0e6df41d91d788e48",
+    "hash": "6f1a909b2588e5a5d19147801b8e43ae",
     "packages": [
         {
             "name": "doctrine/common",
@@ -278,6 +278,98 @@
             "time": "2013-05-11 07:51:12"
         },
         {
+            "name": "guzzle/guzzle",
+            "version": "v3.7.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/guzzle.git",
+                "reference": "v3.7.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/v3.7.1",
+                "reference": "v3.7.1",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.3.2",
+                "symfony/event-dispatcher": ">=2.1"
+            },
+            "replace": {
+                "guzzle/batch": "self.version",
+                "guzzle/cache": "self.version",
+                "guzzle/common": "self.version",
+                "guzzle/http": "self.version",
+                "guzzle/inflection": "self.version",
+                "guzzle/iterator": "self.version",
+                "guzzle/log": "self.version",
+                "guzzle/parser": "self.version",
+                "guzzle/plugin": "self.version",
+                "guzzle/plugin-async": "self.version",
+                "guzzle/plugin-backoff": "self.version",
+                "guzzle/plugin-cache": "self.version",
+                "guzzle/plugin-cookie": "self.version",
+                "guzzle/plugin-curlauth": "self.version",
+                "guzzle/plugin-error-response": "self.version",
+                "guzzle/plugin-history": "self.version",
+                "guzzle/plugin-log": "self.version",
+                "guzzle/plugin-md5": "self.version",
+                "guzzle/plugin-mock": "self.version",
+                "guzzle/plugin-oauth": "self.version",
+                "guzzle/service": "self.version",
+                "guzzle/stream": "self.version"
+            },
+            "require-dev": {
+                "doctrine/cache": "*",
+                "monolog/monolog": "1.*",
+                "phpunit/phpunit": "3.7.*",
+                "psr/log": "1.0.*",
+                "symfony/class-loader": "*",
+                "zendframework/zend-cache": "2.0.*",
+                "zendframework/zend-log": "2.0.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.7-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Guzzle\\Tests": "tests/",
+                    "Guzzle": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                },
+                {
+                    "name": "Guzzle Community",
+                    "homepage": "https://github.com/guzzle/guzzle/contributors"
+                }
+            ],
+            "description": "Guzzle is a PHP HTTP client library and framework for building RESTful web service clients",
+            "homepage": "http://guzzlephp.org/",
+            "keywords": [
+                "client",
+                "curl",
+                "framework",
+                "http",
+                "http client",
+                "rest",
+                "web service"
+            ],
+            "time": "2013-07-05 20:17:54"
+        },
+        {
             "name": "incenteev/composer-parameter-handler",
             "version": "v2.0.0",
             "target-dir": "Incenteev/ParameterHandler",
@@ -326,6 +418,36 @@
                 "parameters management"
             ],
             "time": "2013-04-06 17:15:44"
+        },
+        {
+            "name": "jcroll/foursquare-api-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jcroll/foursquare-api-bundle.git",
+                "reference": "21ca26c6db4077f3f946a57889564e3cbb73d4a3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jcroll/foursquare-api-bundle/zipball/21ca26c6db4077f3f946a57889564e3cbb73d4a3",
+                "reference": "21ca26c6db4077f3f946a57889564e3cbb73d4a3",
+                "shasum": ""
+            },
+            "require": {
+                "guzzle/guzzle": "~3.0",
+                "php": ">=5.3.0"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "Jcroll\\FoursquareApiBundle": ""
+                }
+            },
+            "support": {
+                "source": "https://github.com/jcroll/foursquare-api-bundle/tree/master",
+                "issues": "https://github.com/jcroll/foursquare-api-bundle/issues"
+            },
+            "time": "2013-07-10 16:15:17"
         },
         {
             "name": "jdorn/sql-formatter",
@@ -547,6 +669,101 @@
                 "psr-3"
             ],
             "time": "2012-12-21 11:40:51"
+        },
+        {
+            "name": "raulfraile/ladybug",
+            "version": "v0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/raulfraile/Ladybug.git",
+                "reference": "v0.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/raulfraile/Ladybug/zipball/v0.6",
+                "reference": "v0.6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "symfony/serializer": ">=2.0.4",
+                "symfony/yaml": ">=2.0.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Ladybug": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Raul Fraile",
+                    "email": "raulfraile@gmail.com",
+                    "homepage": "http://www.raulfrailebeneyto.com/"
+                }
+            ],
+            "description": "Simple and Extensible PHP Dumper",
+            "homepage": "https://github.com/raulfraile/Ladybug",
+            "keywords": [
+                "dump",
+                "ladybug",
+                "tree"
+            ],
+            "time": "2013-01-31 14:38:18"
+        },
+        {
+            "name": "raulfraile/ladybug-bundle",
+            "version": "dev-master",
+            "target-dir": "RaulFraile/Bundle/LadybugBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/raulfraile/LadybugBundle.git",
+                "reference": "v0.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/raulfraile/LadybugBundle/zipball/v0.6",
+                "reference": "v0.6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "raulfraile/ladybug": ">=0.5",
+                "symfony/framework-bundle": ">=2.0.0"
+            },
+            "replace": {
+                "raulfraile/ladybugbundle": "dev-master"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "RaulFraile\\Bundle\\LadybugBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Raul Fraile",
+                    "email": "raulfraile@gmail.com",
+                    "homepage": "http://www.raulfrailebeneyto.com/"
+                }
+            ],
+            "description": "Symfony2 bundle for Ladybug library (Simple and Extensible PHP Dumper)",
+            "homepage": "https://github.com/raulfraile/LadybugBundle",
+            "keywords": [
+                "dump",
+                "ladybug",
+                "tree",
+                "twig"
+            ],
+            "time": "2013-05-12 08:36:41"
         },
         {
             "name": "sensio/distribution-bundle",
@@ -1173,10 +1390,11 @@
     "aliases": [
 
     ],
-    "minimum-stability": "stable",
-    "stability-flags": [
-
-    ],
+    "minimum-stability": "alpha",
+    "stability-flags": {
+        "jcroll/foursquare-api-bundle": 20,
+        "raulfraile/ladybug-bundle": 20
+    },
     "platform": {
         "php": ">=5.3.3"
     },

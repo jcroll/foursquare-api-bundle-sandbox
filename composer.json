@@ -1,8 +1,7 @@
 {
-    "name": "symfony/framework-standard-edition",
+    "name": "jcroll/foursquare-api-bundle-sandbox",
     "license": "MIT",
     "type": "project",
-    "description": "The \"Symfony Standard Edition\" distribution",
     "autoload": {
         "psr-0": { "": "src/" }
     },
@@ -18,8 +17,16 @@
         "sensio/distribution-bundle": "2.3.*",
         "sensio/framework-extra-bundle": "2.3.*",
         "sensio/generator-bundle": "2.3.*",
-        "incenteev/composer-parameter-handler": "~2.0"
+        "incenteev/composer-parameter-handler": "~2.0",
+        "jcroll/foursquare-api-bundle": "dev-master@dev",
+        "raulfraile/ladybug-bundle": "dev-master"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:jcroll/foursquare-api-bundle.git"
+        }
+    ],
     "scripts": {
         "post-install-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
@@ -39,7 +46,7 @@
     "config": {
         "bin-dir": "bin"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "alpha",
     "extra": {
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",
