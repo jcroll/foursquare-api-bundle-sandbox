@@ -7,7 +7,7 @@ use Jcroll\FoursquareApiBundle\Client\FoursquareClient;
 
 class DefaultController extends Controller
 {
-    public function indexAction($name)
+    public function indexAction()
     {
         /** @var $client FoursquareClient */
         $client = $this->get('jcroll_foursquare_client');
