@@ -8,5 +8,5 @@
     <li><a href="#">{{ endpoint }}</a>{% if modifier %} <span class="divider">/{% endif %}</span></li>
     {% if modifier %} <li><a href="#">{{ modifier }}</li>{% endif %}
 </ul>
-{{ ladybug_dump(results) }}
+{{ results|ladybug_dump }}
 {% endblock body %}
