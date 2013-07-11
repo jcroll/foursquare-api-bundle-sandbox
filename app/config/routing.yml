@@ -1,3 +1,10 @@
+hwi_oauth_redirect:
+    resource: "@HWIOAuthBundle/Resources/config/routing/redirect.xml"
+    prefix:   /connect
+
+foursquare_login:
+    pattern: /login/check-foursquare
+
 application_default:
     resource: "@ApplicationDefaultBundle/Resources/config/routing.xml"
     prefix:   /

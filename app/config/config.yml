@@ -67,3 +67,11 @@ swiftmailer:
 jcroll_foursquare_api:
     client_id:     %foursquare_client_id%
     client_secret: %foursquare_client_secret%
+
+hwi_oauth:
+    firewall_name: secured_area
+    resource_owners:
+        foursquare:
+            type:                foursquare
+            client_id:           %foursquare_client_id%
+            client_secret:       %foursquare_client_secret%
