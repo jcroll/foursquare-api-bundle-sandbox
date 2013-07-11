@@ -14,9 +14,9 @@ class DefaultController extends Controller
         } else {
             $aggregatedEndpoint = $endpoint;
         }
-//        ladybug_dump_die($this->getRequest()->query->all());
+
         /** @var $client FoursquareClient */
-        $client = $this->get('jcroll_foursquare_client');
+        $client = $this->get('jcroll_foursquare_client'); //ladybug_dump_die($client->getDefaultOption('query')['client_id']);
         $command = $client->getCommand($aggregatedEndpoint, $this->getRequest()->query->all());
         $results = $command->execute();
 
