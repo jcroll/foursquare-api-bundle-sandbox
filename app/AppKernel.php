@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new Application\DefaultBundle\ApplicationDefaultBundle(),
             new Jcroll\FoursquareApiBundle\JcrollFoursquareApiBundle(),
             new RaulFraile\Bundle\LadybugBundle\RaulFraileLadybugBundle(),
+            new HWI\Bundle\OAuthBundle\HWIOAuthBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
