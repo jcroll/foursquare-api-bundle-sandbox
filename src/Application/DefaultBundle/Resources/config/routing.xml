@@ -4,7 +4,10 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
 
-    <route id="application_default_homepage" pattern="/">
+    <route id="application_default_homepage" pattern="/{endpoint}/{modifier}">
         <default key="_controller">ApplicationDefaultBundle:Default:index</default>
+        <default key="endpoint">venues</default>
+        <default key="modifier" xsi:nil="true" />
+        <requirement key="endpoint">user|venues</requirement>
     </route>
 </routes>

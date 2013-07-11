@@ -1,13 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}JcrollFoursquareApiBundle Sandbox{% endblock %}</title>
+        <link rel="stylesheet" href="http://rawgithub.com/twitter/bootstrap/master/docs/assets/css/bootstrap.css" />
+        <style type="text/css">
+            pre a:hover {
+                text-decoration: none;
+            }
+        </style>
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <div class="container">
+            {% block body %}{% endblock %}
+        </div>
         {% block javascripts %}{% endblock %}
     </body>
 </html>
