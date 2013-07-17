@@ -2,6 +2,7 @@
 
 namespace Application\DefaultBundle\Controller;
 
+use Jcroll\FoursquareApiBundle\JcrollFoursquareApiBundle;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Jcroll\FoursquareApiBundle\Client\FoursquareClient;
 
@@ -16,7 +17,7 @@ class DefaultController extends Controller
         }
 
         /** @var $client FoursquareClient */
-        $client = $this->get('jcroll_foursquare_client'); //ladybug_dump_die($client->getDefaultOption('query')['client_id']);
+        $client = $this->get('jcroll_foursquare_client');
         $command = $client->getCommand($aggregatedEndpoint, $this->getRequest()->query->all());
         $results = $command->execute();
 

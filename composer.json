@@ -18,8 +18,8 @@
         "sensio/framework-extra-bundle": "2.3.*",
         "sensio/generator-bundle": "2.3.*",
         "incenteev/composer-parameter-handler": "~2.0",
-        "jcroll/foursquare-api-bundle": "dev-master@dev",
-        "raulfraile/ladybug-bundle": "dev-master",
+        "jcroll/foursquare-api-bundle": "dev-master",
+        "raulfraile/ladybug-bundle": "*",
         "phpunit/phpunit": "3.7.*"
     },
     "repositories": [

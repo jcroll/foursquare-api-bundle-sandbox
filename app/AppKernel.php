@@ -17,8 +17,8 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Application\DefaultBundle\ApplicationDefaultBundle(),
-            new Jcroll\FoursquareApiBundle\JcrollFoursquareApiBundle(),
             new RaulFraile\Bundle\LadybugBundle\RaulFraileLadybugBundle(),
+            new Jcroll\FoursquareApiBundle\JcrollFoursquareApiBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
@@ -33,15 +33,5 @@ class AppKernel extends Kernel
     public function registerContainerConfiguration(LoaderInterface $loader)
     {
         $loader->load(__DIR__.'/config/config_'.$this->getEnvironment().'.yml');
-    }
-
-    public function getCacheDir()
-    {
-        return "/tmp/sf2";
-    }
-
-    public function getLogDir()
-    {
-        return "/tmp/sf2";
     }
 }

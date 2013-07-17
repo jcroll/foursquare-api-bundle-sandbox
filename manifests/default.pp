@@ -1,19 +1,18 @@
 
-exec { 'apt-get-update':
-  command => 'apt-get update',
-  path    => '/usr/bin/',
-  timeout => 60,
-  tries   => 3,
+    group { 'puppet': ensure => present }
+Exec { path => [ '/bin/', '/sbin/', '/usr/bin/', '/usr/sbin/' ] }
+File { owner => 0, group => 0, mode => 0644 }
+
+class {'apt':
+  always_apt_update => true,
 }
 
-class { 'apt':
-  always_apt_update => false,
-}
+Class['::apt::update'] -> Package <|
+    title != 'python-software-properties'
+and title != 'software-properties-common'
+|>
 
-package { ['python-software-properties']:
-  ensure  => 'installed',
-  require => Exec['apt-get-update'],
-}
+apt::ppa { 'ppa:ondrej/php5': }
 
 file { '/home/vagrant/.bash_aliases':
   ensure => 'present',
@@ -23,15 +22,13 @@ file { '/home/vagrant/.bash_aliases':
 package { [
     'build-essential',
     'vim',
-    'curl'
+    'curl',
+    'git'
   ]:
   ensure  => 'installed',
-  require => Exec['apt-get-update'],
 }
 
-class { 'apache':
-  require => Exec['apt-get-update'],
-}
+class { 'apache': }
 
 apache::dotconf { 'custom':
   content => 'EnableSendfile Off',
@@ -39,23 +36,22 @@ apache::dotconf { 'custom':
 
 apache::module { 'rewrite': }
 
-apache::vhost { 'foursquare-api-bundle.local.coddict.ca':
-  server_name   => 'foursquare-api-bundle.local.coddict.ca',
-  serveraliases => [    'www.foursquare-api-bundle.local.coddict.ca'],
+apache::vhost { 'foursquare-api-bundle-sandbox.local':
+  server_name   => 'foursquare-api-bundle-sandbox.local',
+  serveraliases => [
+    'www.foursquare-api-bundle-sandbox.local'
+  ],
   docroot       => '/var/www/web/',
   port          => '80',
-  env_variables => [],
+  env_variables => [
+],
   priority      => '1',
-}
-
-apt::ppa { 'ppa:ondrej/php5':
-  before  => Class['php'],
 }
 
 class { 'php':
   service       => 'apache',
   module_prefix => '',
-  require       => [Exec['apt-get-update'], Package['apache']],
+  require       => Package['apache'],
 }
 
 php::module { 'php5-cli': }
@@ -73,10 +69,6 @@ class { 'php::pear':
 
 
 
-class { 'xdebug':
-  service => 'apache',
-}
-
 php::pecl::module { 'xhprof':
   use_package     => false,
   preferred_state => 'beta',
@@ -91,6 +83,13 @@ apache::vhost { 'xhprof':
 }
 
 
+class { 'xdebug':
+  service => 'apache',
+}
+
+class { 'composer':
+  require => Package['php5', 'curl'],
+}
 
 puphpet::ini { 'xdebug':
   value   => [

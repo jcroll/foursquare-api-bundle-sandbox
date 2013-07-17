@@ -65,5 +65,5 @@ swiftmailer:
     spool:     { type: memory }
 
 jcroll_foursquare_api:
-    client_id:
+    client_id: %foursquare_client_id%
     client_secret: %foursquare_client_secret%
