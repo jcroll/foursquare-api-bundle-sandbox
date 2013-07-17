@@ -2,7 +2,6 @@
 
 namespace Application\DefaultBundle\Controller;
 
-use Jcroll\FoursquareApiBundle\JcrollFoursquareApiBundle;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Jcroll\FoursquareApiBundle\Client\FoursquareClient;
 
