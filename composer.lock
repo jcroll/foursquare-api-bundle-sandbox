@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "6e7cbde5f04b0205e8cd2aec7562fae0",
+    "hash": "a44a7edbbbd935e6bcbe90def4366078",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -745,16 +745,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jcroll/foursquare-api-bundle.git",
-                "reference": "31781fbfb639e46abf585d797efbf7f078bccccf"
+                "reference": "afc92b9bebc5af37035bc25eab3cc423dac2c8ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jcroll/foursquare-api-bundle/zipball/31781fbfb639e46abf585d797efbf7f078bccccf",
-                "reference": "31781fbfb639e46abf585d797efbf7f078bccccf",
+                "url": "https://api.github.com/repos/jcroll/foursquare-api-bundle/zipball/afc92b9bebc5af37035bc25eab3cc423dac2c8ce",
+                "reference": "afc92b9bebc5af37035bc25eab3cc423dac2c8ce",
                 "shasum": ""
             },
             "require": {
-                "guzzle/guzzle": "~3.7",
+                "jcroll/foursquare-api-client": "*",
                 "symfony/framework-bundle": "~2.1"
             },
             "type": "symfony-bundle",
@@ -775,13 +775,58 @@
             "description": "Symfony FoursquareApiBundle",
             "homepage": "https://github.com/jcroll/foursquare-api-bundle",
             "keywords": [
+                "api",
+                "client",
                 "foursquare"
             ],
             "support": {
                 "source": "https://github.com/jcroll/foursquare-api-bundle/tree/master",
                 "issues": "https://github.com/jcroll/foursquare-api-bundle/issues"
             },
-            "time": "2013-07-17 14:56:06"
+            "time": "2013-07-18 00:22:51"
+        },
+        {
+            "name": "jcroll/foursquare-api-client",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jcroll/foursquare-api-client.git",
+                "reference": "3224f28e5da1bf4ad2bc465160b72d9328a435b4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jcroll/foursquare-api-client/zipball/3224f28e5da1bf4ad2bc465160b72d9328a435b4",
+                "reference": "3224f28e5da1bf4ad2bc465160b72d9328a435b4",
+                "shasum": ""
+            },
+            "require": {
+                "guzzle/guzzle": "~3.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Jcroll\\FoursquareApiClient": "lib/",
+                    "Jcroll\\FoursquareApiClient\\Tests": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jarrett Croll",
+                    "email": "jarrett.croll@gmail.com"
+                }
+            ],
+            "description": "PHP Foursquare Api Client",
+            "homepage": "https://github.com/jcroll/foursquare-api-client",
+            "keywords": [
+                "api",
+                "client",
+                "foursquare"
+            ],
+            "time": "2013-07-18 00:24:08"
         },
         {
             "name": "jdorn/sql-formatter",
@@ -2087,7 +2132,7 @@
     "aliases": [
 
     ],
-    "minimum-stability": "alpha",
+    "minimum-stability": "dev",
     "stability-flags": {
         "jcroll/foursquare-api-bundle": 20
     },
