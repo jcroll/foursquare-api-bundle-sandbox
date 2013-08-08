@@ -474,12 +474,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jcroll/foursquare-api-client.git",
-                "reference": "a609666d40a4284ad68b64123cb5c4a89cf337a1"
+                "reference": "v1.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jcroll/foursquare-api-client/zipball/a609666d40a4284ad68b64123cb5c4a89cf337a1",
-                "reference": "a609666d40a4284ad68b64123cb5c4a89cf337a1",
+                "url": "https://api.github.com/repos/jcroll/foursquare-api-client/zipball/v1.0.1",
+                "reference": "v1.0.1",
                 "shasum": ""
             },
             "require": {
@@ -514,7 +514,7 @@
                 "client",
                 "foursquare"
             ],
-            "time": "2013-08-06 14:56:25"
+            "time": "2013-08-06 15:33:17"
         },
         {
             "name": "jdorn/sql-formatter",
