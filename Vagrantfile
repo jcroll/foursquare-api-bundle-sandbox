@@ -32,7 +32,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     ansible.inventory_path = "provisioning/inventory"
     ansible.limit = "vagrant.dev.foursquare-api-bundle-sandbox.com"
     ansible.verbose = 'v'
-    ansible.tags = ["foursquare-api-bundle-sandbox"]
+    #ansible.tags = ["foursquare-api-bundle-sandbox"]
   end
 
 end
