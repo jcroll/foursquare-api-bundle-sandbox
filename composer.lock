@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "61f2ea7544a8895cb5b274f105ed720e",
-    "content-hash": "60640282dae6b1f988fa4537d2a2cd87",
+    "hash": "9aa3113c148143e6902eb72f6dc598da",
+    "content-hash": "536ed50b4e9bef6c62d806a2144ed98d",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -289,12 +289,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "70896e0c5534e0ecf1cae165397211f6e03e50ae"
+                "reference": "80fbaab13ea4917924e385e56bcf16b27313b6f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/70896e0c5534e0ecf1cae165397211f6e03e50ae",
-                "reference": "70896e0c5534e0ecf1cae165397211f6e03e50ae",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/80fbaab13ea4917924e385e56bcf16b27313b6f0",
+                "reference": "80fbaab13ea4917924e385e56bcf16b27313b6f0",
                 "shasum": ""
             },
             "require": {
@@ -353,7 +353,7 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2016-08-24 17:23:58"
+            "time": "2016-08-25 19:10:46"
         },
         {
             "name": "doctrine/doctrine-bundle",
@@ -969,14 +969,8 @@
             "target-dir": "Jcroll/FoursquareApiBundle",
             "source": {
                 "type": "git",
-                "url": "https://github.com/jcroll/foursquare-api-bundle.git",
+                "url": "https://github.com/jcroll/foursquare-api-bundle",
                 "reference": "eea17edf8593f739c6613591c193f604f24ff0fa"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/jcroll/foursquare-api-bundle/zipball/eea17edf8593f739c6613591c193f604f24ff0fa",
-                "reference": "eea17edf8593f739c6613591c193f604f24ff0fa",
-                "shasum": ""
             },
             "require": {
                 "jcroll/foursquare-api-client": "~1",
@@ -993,7 +987,6 @@
                     "Jcroll\\FoursquareApiBundle": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1017,17 +1010,15 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/jcroll/foursquare-api-client.git",
-                "reference": "c8546b6e9d7cdeb79115a50aca430cb2ac00b54b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/jcroll/foursquare-api-client/zipball/c8546b6e9d7cdeb79115a50aca430cb2ac00b54b",
-                "reference": "c8546b6e9d7cdeb79115a50aca430cb2ac00b54b",
-                "shasum": ""
+                "url": "https://github.com/jcroll/foursquare-api-client",
+                "reference": "1a7ac742529b9b70928cbd4235eecb3bed543c1e"
             },
             "require": {
-                "guzzlehttp/guzzle": "~3.8"
+                "guzzlehttp/guzzle": ">=3.7 <4.0",
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.8"
             },
             "type": "library",
             "extra": {
@@ -1036,12 +1027,11 @@
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Jcroll\\FoursquareApiClient": "lib/",
-                    "Jcroll\\FoursquareApiClient\\Tests": "tests/"
+                "psr-4": {
+                    "Jcroll\\FoursquareApiClient\\": "src/",
+                    "Jcroll\\FoursquareApiClient\\Tests\\": "tests/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1058,7 +1048,7 @@
                 "client",
                 "foursquare"
             ],
-            "time": "2016-08-25 16:49:07"
+            "time": "2016-08-25 20:00:16"
         },
         {
             "name": "jdorn/sql-formatter",
@@ -2650,12 +2640,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "cf96ecf366eb24cfe680b62f9134b5ddc9b86818"
+                "reference": "1f831ae9ba0a8d49bcccc5743ae5823a754f6f56"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/cf96ecf366eb24cfe680b62f9134b5ddc9b86818",
-                "reference": "cf96ecf366eb24cfe680b62f9134b5ddc9b86818",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/1f831ae9ba0a8d49bcccc5743ae5823a754f6f56",
+                "reference": "1f831ae9ba0a8d49bcccc5743ae5823a754f6f56",
                 "shasum": ""
             },
             "require": {
@@ -2704,10 +2694,118 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2016-05-30 09:07:11"
+            "time": "2016-08-25 17:56:11"
         }
     ],
-    "packages-dev": [],
+    "packages-dev": [
+        {
+            "name": "sensio/generator-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sensiolabs/SensioGeneratorBundle.git",
+                "reference": "5696bff02626571bb562454291c5f71becf388d6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sensiolabs/SensioGeneratorBundle/zipball/5696bff02626571bb562454291c5f71becf388d6",
+                "reference": "5696bff02626571bb562454291c5f71becf388d6",
+                "shasum": ""
+            },
+            "require": {
+                "symfony/console": "~2.7|~3.0",
+                "symfony/framework-bundle": "~2.7|~3.0",
+                "symfony/process": "~2.7|~3.0",
+                "symfony/yaml": "~2.7|~3.0"
+            },
+            "require-dev": {
+                "doctrine/orm": "~2.4",
+                "symfony/doctrine-bridge": "~2.7|~3.0",
+                "twig/twig": "~1.18"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Sensio\\Bundle\\GeneratorBundle\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "This bundle generates code for you",
+            "time": "2016-07-26 10:53:57"
+        },
+        {
+            "name": "symfony/phpunit-bridge",
+            "version": "2.8.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/phpunit-bridge.git",
+                "reference": "fc69aad7dba2ab3eed5cf90c8e3ede4fb961effd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/fc69aad7dba2ab3eed5cf90c8e3ede4fb961effd",
+                "reference": "fc69aad7dba2ab3eed5cf90c8e3ede4fb961effd",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "suggest": {
+                "symfony/debug": "For tracking deprecated interfaces usages at runtime with DebugClassLoader"
+            },
+            "type": "symfony-bridge",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.8-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Bridge\\PhpUnit\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony PHPUnit Bridge",
+            "homepage": "https://symfony.com",
+            "time": "2016-08-19 06:48:01"
+        }
+    ],
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {

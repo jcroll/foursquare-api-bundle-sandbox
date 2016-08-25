@@ -6,6 +6,16 @@
         "psr-4": { "": "src/" },
         "classmap": [ "app/AppKernel.php", "app/AppCache.php" ]
     },
+    "repositories": [
+        {
+            "url": "https://github.com/jcroll/foursquare-api-client",
+            "type": "git"
+        },
+        {
+            "url": "https://github.com/jcroll/foursquare-api-bundle",
+            "type": "git"
+        }
+    ],
     "require": {
         "php": ">=5.3.9",
         "symfony/symfony": "2.8.*",
@@ -42,9 +52,7 @@
     },
     "config": {
         "bin-dir": "bin",
-        "process-timeout": 600,
-        "preferred-install": "dist",
-        "github-protocols": ["https"]
+        "process-timeout": 600
     },
     "minimum-stability": "dev",
     "extra": {
