@@ -14,5 +14,5 @@ parameters:
     locale:            en
     secret:            ThisTokenIsNotSoSecretChangeIt
 
-    foursquare_client_id:
-    foursquare_client_secret:
+    foursquare_client_id:     <YOUR_CLIENT_ID>
+    foursquare_client_secret: <YOUR_CLIENT_SECRET>

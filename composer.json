@@ -19,7 +19,6 @@
         "sensio/generator-bundle": "2.3.*",
         "incenteev/composer-parameter-handler": "~2.0",
         "jcroll/foursquare-api-bundle": "~1",
-        "raulfraile/ladybug-bundle": "*",
         "phpunit/phpunit": "3.7.*"
     },
     "scripts": {
@@ -39,7 +38,10 @@
         ]
     },
     "config": {
-        "bin-dir": "bin"
+        "bin-dir": "bin",
+        "process-timeout": 600,
+        "preferred-install": "dist",
+        "github-protocols": ["https"]
     },
     "minimum-stability": "dev",
     "extra": {

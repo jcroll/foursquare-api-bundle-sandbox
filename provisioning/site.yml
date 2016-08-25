@@ -1,0 +1,7 @@
+- hosts: development
+  roles:
+    - { role: common, tags: [common] }
+    - { role: geerlingguy.nginx, sudo: yes, tags: [nginx] }
+    - { role: geerlingguy.php, sudo: yes, tags: [php] }
+    - { role: geerlingguy.composer, sudo: yes, tags: [composer] }
+    - { role: foursquare-api-bundle-sandbox, tags: [foursquare-api-bundle-sandbox] }

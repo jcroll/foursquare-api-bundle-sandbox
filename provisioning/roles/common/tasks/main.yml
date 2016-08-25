@@ -1,0 +1,35 @@
+---
+- apt_repository: repo='ppa:ondrej/php'
+  sudo: true
+
+- apt: update_cache=yes
+  sudo: true
+
+- name: Install packages
+  apt: pkg={{ item }} update_cache=yes state=latest
+  sudo: yes
+  with_items:
+    - curl
+    - htop
+    - git
+    - acl
+
+- shell: git config --global core.editor vim
+
+- stat: path=/home/{{ remote_user }}/.bash_it
+  register: bash_it
+
+- name: Check out bash it repository
+  git: repo=https://github.com/Bash-it/bash-it.git dest=/home/{{ remote_user }}/.bash_it
+  when: bash_it.stat.islnk is not defined
+  sudo: no
+
+- name: Install bash it
+  shell: yes | /home/{{ remote_user }}/.bash_it/install.sh
+  when: bash_it.stat.islnk is not defined
+  sudo: no
+
+- name: Select bash it theme
+  shell: export BASH_IT_THEME='{{ common_bash_it_theme }}' chdir=/home/{{ remote_user }}/.bash_it/themes
+  when: bash_it.stat.islnk is not defined
+  sudo: no
