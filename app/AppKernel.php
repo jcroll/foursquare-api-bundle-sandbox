@@ -17,7 +17,6 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Application\DefaultBundle\ApplicationDefaultBundle(),
-            new RaulFraile\Bundle\LadybugBundle\RaulFraileLadybugBundle(),
             new Jcroll\FoursquareApiBundle\JcrollFoursquareApiBundle(),
         );
 
@@ -28,6 +27,15 @@ class AppKernel extends Kernel
         }
 
         return $bundles;
+    }
+
+    public function getCacheDir()
+    {
+        return sprintf('/dev/shm/foursquare-api-bundle-sandbox/cache/%s', $this->getEnvironment());
+    }
+    public function getLogDir()
+    {
+        return sprintf('/var/log/foursquare-api-bundle-sandbox/%s', $this->environment);
     }
 
     public function registerContainerConfiguration(LoaderInterface $loader)

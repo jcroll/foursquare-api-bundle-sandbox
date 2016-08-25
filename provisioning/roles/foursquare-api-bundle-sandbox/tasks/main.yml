@@ -1,0 +1,21 @@
+---
+- set_fact:
+    php_fpm_daemon: php7.0-fpm
+
+- file: path=/dev/shm/foursquare-api-bundle-sandbox state=directory
+
+- file: path=/var/log/foursquare-api-bundle-sandbox state=directory owner={{ remote_user }} group={{ remote_user }}
+  become: true
+
+- shell: setfacl -R -m u:"www-data":rwX -m u:`whoami`:rwX /dev/shm/foursquare-api-bundle-sandbox /var/log/foursquare-api-bundle-sandbox
+  become: yes
+
+- shell: setfacl -dR -m u:"www-data":rwX -m u:`whoami`:rwX /dev/shm/foursquare-api-bundle-sandbox /var/log/foursquare-api-bundle-sandbox
+  become: yes
+
+- lineinfile: dest=/etc/hosts regexp=^127\.0\.0\.1 line="127.0.0.1 localhost foursquare-api-bundle-sandbox.l"
+  become: true
+
+- composer: command=install working_dir=/var/www/foursquare-api-bundle-sandbox
+  notify: reload nginx
+  notify: restart php-fpmcd

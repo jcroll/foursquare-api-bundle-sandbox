@@ -1,0 +1,57 @@
+---
+common_bash_it_theme: bobby
+
+nginx_worker_connections: 1024
+nginx_remove_default_vhost: true
+nginx_vhosts:
+  - listen: 80
+    server_name: foursquare-api-bundle-sandbox.l
+    root: /var/www/foursquare-api-bundle-sandbox/web
+    index: off
+    access_log: off
+    error_log: api_error.log
+    extra_parameters: |
+      location / {
+        try_files $uri /app.php$is_args$args;
+      }
+      location ~ ^/(app_dev|config)\.php(/|$) {
+        fastcgi_pass 127.0.0.1:9000;
+        fastcgi_split_path_info ^(.+\.php)(/.*)$;
+        include fastcgi_params;
+        fastcgi_param  SCRIPT_FILENAME  $realpath_root$fastcgi_script_name;
+        fastcgi_param DOCUMENT_ROOT $realpath_root;
+      }
+      location ~ ^/app\.php(/|$) {
+        fastcgi_pass 127.0.0.1:9000;
+        fastcgi_split_path_info ^(.+\.php)(/.*)$;
+        include fastcgi_params;
+        fastcgi_param  SCRIPT_FILENAME  $realpath_root$fastcgi_script_name;
+        fastcgi_param DOCUMENT_ROOT $realpath_root;
+        internal;
+      }
+
+php_webserver_daemon: nginx
+php_enable_php_fpm: true
+php_enable_apc: true
+php_apc_enable_cli: 1
+php_packages:
+  - php7.0-common
+  - php7.0-cli
+  - php7.0-dev
+  - php7.0-fpm
+  - libpcre3-dev
+  - php7.0-gd
+  - php7.0-curl
+  - php7.0-imap
+  - php7.0-json
+  - php7.0-opcache
+  - php7.0-xml
+  - php7.0-mbstring
+  - php-sqlite3
+  - php-apcu
+  - php7.0-mcrypt
+  - php7.0-mysqlnd
+  - php7.0-intl
+  - php7.0-zip
+
+remote_user: vagrant
