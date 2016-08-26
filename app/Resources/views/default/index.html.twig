@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <table class="table table-striped table-bordered">
+        {% for operation, endpoint in endpoints %}
+            <tr>
+                <td>
+                {% if endpoint.modifier is null %}
+                    <a href="{{ path('application_default_query', {'endpoint': endpoint.endpoint}) }}">
+                        {{ operation }}
+                    </a>
+                {% else %}
+                    <a href="{{ path('application_default_query', {'endpoint': endpoint.endpoint, 'modifier': endpoint.modifier}) }}">
+                        {{ operation }}
+                    </a>
+                {% endif %}
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock content %}
