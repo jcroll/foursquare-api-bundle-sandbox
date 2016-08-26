@@ -6,16 +6,6 @@
         "psr-4": { "": "src/" },
         "classmap": [ "app/AppKernel.php", "app/AppCache.php" ]
     },
-    "repositories": [
-        {
-            "url": "https://github.com/jcroll/foursquare-api-client",
-            "type": "git"
-        },
-        {
-            "url": "https://github.com/jcroll/foursquare-api-bundle",
-            "type": "git"
-        }
-    ],
     "require": {
         "php": ">=5.3.9",
         "symfony/symfony": "2.8.*",
@@ -26,13 +16,13 @@
         "sensio/distribution-bundle": "~4.0",
         "sensio/framework-extra-bundle": "^3.0.2",
         "incenteev/composer-parameter-handler": "~2.0",
-        "jcroll/foursquare-api-bundle": "dev-master@dev",
-        "jcroll/foursquare-api-client": "dev-master@dev",
-        "phpunit/phpunit": "3.7.*"
+        "jcroll/foursquare-api-client": "~2",
+        "jcroll/foursquare-api-bundle": "~1.1"
     },
     "require-dev": {
         "sensio/generator-bundle": "~3.0",
-        "symfony/phpunit-bridge": "~2.7"
+        "symfony/phpunit-bridge": "~2.7",
+        "phpunit/phpunit": "~5"
     },
     "scripts": {
         "symfony-scripts": [

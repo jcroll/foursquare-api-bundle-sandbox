@@ -13,10 +13,10 @@ class DefaultController extends Controller
         $aggregatedEndpoint = $modifier ? sprintf('%s/%s', $endpoint, $modifier) : $endpoint;
 
         /** @var $client FoursquareClient */
-        $client = $this->get('jcroll_foursquare_client');
+        $client  = $this->get('jcroll_foursquare_client');
         $command = $client->getCommand($aggregatedEndpoint, $this->getRequest()->query->all());
-        $results = $command->execute();
+        $results = $client->execute($command);
 
-        return new JsonResponse($results);
+        return new JsonResponse((array) $results);
     }
 }
