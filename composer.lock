@@ -1268,12 +1268,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jcroll/foursquare-api-bundle.git",
-                "reference": "1c8a1e36d87cfdae688e205a1ce409cb587a4d98"
+                "reference": "6d536a5e253002ab7a4d829ebf7615f67ed56642"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jcroll/foursquare-api-bundle/zipball/1c8a1e36d87cfdae688e205a1ce409cb587a4d98",
-                "reference": "1c8a1e36d87cfdae688e205a1ce409cb587a4d98",
+                "url": "https://api.github.com/repos/jcroll/foursquare-api-bundle/zipball/6d536a5e253002ab7a4d829ebf7615f67ed56642",
+                "reference": "6d536a5e253002ab7a4d829ebf7615f67ed56642",
                 "shasum": ""
             },
             "require": {
@@ -1311,7 +1311,7 @@
                 "client",
                 "foursquare"
             ],
-            "time": "2016-08-30 17:59:49"
+            "time": "2016-09-07 19:08:51"
         },
         {
             "name": "jcroll/foursquare-api-client",
@@ -1319,12 +1319,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jcroll/foursquare-api-client.git",
-                "reference": "efa03e609636d933a3c0b381149333f7ae69c388"
+                "reference": "de82465b12abad6b55d2fbe9eb205892bce39a26"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jcroll/foursquare-api-client/zipball/efa03e609636d933a3c0b381149333f7ae69c388",
-                "reference": "efa03e609636d933a3c0b381149333f7ae69c388",
+                "url": "https://api.github.com/repos/jcroll/foursquare-api-client/zipball/de82465b12abad6b55d2fbe9eb205892bce39a26",
+                "reference": "de82465b12abad6b55d2fbe9eb205892bce39a26",
                 "shasum": ""
             },
             "require": {
@@ -1338,7 +1338,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.0-dev"
+                    "dev-master": "2.1-dev"
                 }
             },
             "autoload": {
@@ -1362,9 +1362,11 @@
             "keywords": [
                 "api",
                 "client",
-                "foursquare"
+                "foursquare",
+                "oauth",
+                "swarm"
             ],
-            "time": "2016-08-26 16:20:47"
+            "time": "2016-09-07 15:09:58"
         },
         {
             "name": "jdorn/sql-formatter",

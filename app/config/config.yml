@@ -51,6 +51,12 @@ swiftmailer:
     password:  %mailer_password%
     spool:     { type: memory }
 
+#jcroll_foursquare_api:
+#    client_id:     %foursquare_client_id%
+#    client_secret: %foursquare_client_secret%
+#    version:       20140830
+#    mode:          swarm
+
 hwi_oauth:
     firewall_names: [secured_area]
     resource_owners:
