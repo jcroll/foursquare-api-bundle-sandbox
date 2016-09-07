@@ -4,7 +4,6 @@ namespace Application\DefaultBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Jcroll\FoursquareApiClient\Client\FoursquareClient;
-use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends Controller
@@ -12,7 +11,7 @@ class DefaultController extends Controller
     public function indexAction()
     {
         $contents = file_get_contents(
-            sprintf('%s/../vendor/jcroll/foursquare-api-client/src/Resources/config/client.json',
+            sprintf('%s/../vendor/jcroll/foursquare-api-client/src/Resources/config/20160901/client.json',
                 $this->getParameter('kernel.root_dir')
             )
         );
@@ -47,6 +46,11 @@ class DefaultController extends Controller
         /** @var $client FoursquareClient */
         $client   = $this->get('jcroll_foursquare_client');
         $command  = $client->getCommand($aggregatedEndpoint, $request->query->all());
+
+        if ($mode = $request->get('mode')) {
+            $client->setMode($mode);
+        }
+
         $response = $client->execute($command);
 
         return $this->render('default/query.html.twig', [
